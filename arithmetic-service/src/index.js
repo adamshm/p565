@@ -4,10 +4,6 @@ const app = express();
 app.use(cors());
 const port = 3000;
 
-app.get('/', (req, res) => {
-    res.send('Arithmetic service - Hello World!');
-});
-
 app.get('/add/:num1/:num2', (req, res) => {
     const num1 = parseFloat(req.params.num1);
     const num2 = parseFloat(req.params.num2);
